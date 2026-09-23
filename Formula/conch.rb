@@ -1,14 +1,14 @@
 class Conch < Formula
   desc "Conch Shell"
   homepage "https://github.com/prymul/conch"
-  url "https://github.com/prymul/conch/archive/refs/tags/0.2.0.tar.gz"
-  sha256 "923bd797c6ebc2c04458c4ff35846c3ed00bdf4e0ee79d5b199493c87f16ab07"
+  url "https://github.com/prymul/conch/archive/refs/tags/0.3.0.tar.gz"
+  sha256 "683706feafb8c208786d069a3837c1212d0406ecc1631cf37f5ef752aaeb636f"
   license "MIT"
 
   depends_on "rust" => :build
 
   def install
-    system "cargo", "install", *std_cargo_args
+    system "cargo", "install", *std_cargo_args(path: "crates/conch")
   end
 
   test do
